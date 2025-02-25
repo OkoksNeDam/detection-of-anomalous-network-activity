@@ -27,7 +27,7 @@ class FlowPCAPProcessorService(FlowFileProcessorService):
     """
 
     __FILE_EXTENSION = ".pcap"
-    FEATURE_LIST = ['packets_number', 'total_packets_len', 'flow_duration', 'max_packet_len',
+    FEATURE_LIST = ['flow_name', 'packets_number', 'total_packets_len', 'flow_duration', 'max_packet_len',
                     'min_packet_len', 'mean_packet_len', 'std_packet_len', 'flow_IAT_mean', 'flow_IAT_std',
                     'flow_IAT_max', 'flow_IAT_min', 'flow_IAT_total', 'total_headers_len',
                     'packets/s', 'FIN_flag_count', 'SYN_flag_count', 'RST_flag_count', 'PUSH_flag_count',
@@ -72,7 +72,7 @@ class FlowPCAPProcessorService(FlowFileProcessorService):
         """
         Считает минимальный размер пакета в потоке.
         """
-        return np.max(list(map(len, self.__packets))),
+        return np.min(list(map(len, self.__packets))),
 
     def __get_mean_packet_length(self) -> tuple:
         """

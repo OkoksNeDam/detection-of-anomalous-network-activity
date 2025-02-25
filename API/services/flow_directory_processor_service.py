@@ -33,7 +33,7 @@ class FlowDirectoryProcessorService:
                 # Обработка текущего файла и получени из него данных.
                 flow_data = flow_processor.process()
                 # Добавление новых данных в массив.
-                self.__flows_data += [flow_data]
+                self.__flows_data += [(filename, *flow_data)]
 
     def get_pandas_flows_data(self):
         return pd.DataFrame(self.__flows_data, columns=self.__flow_processor.FEATURE_LIST)
