@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 import streamlit as st
 
 import matplotlib.pyplot as plt
@@ -66,5 +65,6 @@ def show_main_page() -> None:
     show_model_list()
     st.divider()
     show_generate_report()
+
 
 show_main_page()
