@@ -17,7 +17,7 @@ router = APIRouter()
 
 @router.post("/generate", description='Получить отчет об аномалиях в загруженных потоках.')
 async def generate_report(uploaded_flow: UploadFile = File(...), uploaded_model: str = Form(...)):
-    flow_processor_path = "http://localhost:8000/api/v1/processor/process_flow"
+    flow_processor_path = "http://0.0.0.0:8000/api/v1/processor/process_flow"
     try:
         client = httpx.AsyncClient()
         response = await client.post(url=flow_processor_path,

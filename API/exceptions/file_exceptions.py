@@ -1,4 +1,4 @@
-from exceptions.base import AppException
+from exceptions.base_exception import AppException
 
 
 class FileExtensionException(AppException):

@@ -1,0 +1,10 @@
+services:
+  fastapi:
+    build: API/
+    ports:
+      - 8000:8000
+
+  streamlitapp:
+    build: Front/
+    ports:
+        - 8501:8501

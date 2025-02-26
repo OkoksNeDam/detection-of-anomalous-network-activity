@@ -3,7 +3,7 @@ import shutil
 import zipfile
 from io import BytesIO
 
-from fastapi import APIRouter, UploadFile, File, HTTPException, status, Request
+from fastapi import APIRouter, UploadFile, File, HTTPException, status
 
 from exceptions.file_exceptions import FileExtensionException
 from services.flow_directory_processor_service import FlowDirectoryProcessorService

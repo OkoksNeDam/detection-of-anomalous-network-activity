@@ -57,7 +57,6 @@ def show_main_page() -> None:
     st.set_page_config(
         page_title="anomaly detection",
     )
-
     st.write("# Обнаружение аномальной сетевой активности на хосте с использованием машинного обучения")
     st.divider()
     show_model_upload()
